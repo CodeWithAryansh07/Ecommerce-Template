@@ -14,12 +14,10 @@ const CartSidebar = ({ isOpen, onClose }: CartSidebarProps) => {
 
   const sidebarVariants = {
     hidden: { 
-      x: '100%',
-      transition: { duration: 0.3, ease: 'easeIn' }
+      x: '100%'
     },
     visible: { 
-      x: 0,
-      transition: { duration: 0.3, ease: 'easeOut' }
+      x: 0
     }
   };
 
@@ -48,6 +46,7 @@ const CartSidebar = ({ isOpen, onClose }: CartSidebarProps) => {
             initial="hidden"
             animate="visible"
             exit="hidden"
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="fixed right-0 top-0 h-full w-full max-w-md bg-ivory shadow-2xl z-50 flex flex-col"
           >
             {/* Header */}

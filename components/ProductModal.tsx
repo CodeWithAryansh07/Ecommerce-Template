@@ -45,19 +45,12 @@ const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
     visible: { 
       opacity: 1, 
       scale: 1,
-      y: 0,
-      transition: {
-        duration: 0.3,
-        ease: 'easeOut'
-      }
+      y: 0
     },
     exit: {
       opacity: 0,
       scale: 0.8,
-      y: 50,
-      transition: {
-        duration: 0.2
-      }
+      y: 50
     }
   };
 
@@ -77,6 +70,7 @@ const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
             initial="hidden"
             animate="visible"
             exit="exit"
+            transition={{ duration: 0.3, ease: "easeOut" }}
             className="bg-ivory rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >

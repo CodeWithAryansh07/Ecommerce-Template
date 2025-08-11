@@ -30,8 +30,7 @@ const ProductCard = ({ product, onClick }: ProductCardProps) => {
     hidden: { opacity: 0, y: 30 },
     visible: { 
       opacity: 1, 
-      y: 0,
-      transition: { duration: 0.6, ease: 'easeOut' }
+      y: 0
     }
   };
 
@@ -39,6 +38,7 @@ const ProductCard = ({ product, onClick }: ProductCardProps) => {
     <motion.div
       variants={cardVariants}
       whileHover={{ y: -8 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       className="group cursor-pointer"
       onClick={onClick}
     >
